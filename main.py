@@ -12,6 +12,7 @@ class Stopwatch(QWidget):
         self.reset_label = QPushButton("Reset",self)
         self.timer= QTimer(self)
         self.initUI()
+        
     def initUI(self):
             self.setWindowTitle("Stopwatch")
             
@@ -20,6 +21,11 @@ class Stopwatch(QWidget):
             vbox.addWidget(self.start_label)            
             vbox.addWidget(self.stop_label)            
             vbox.addWidget(self.reset_label)        
+            
+            self.setLayout(vbox)
+            self.time_label.setAlignment(Qt.AlignCenter)
+            
+            
     def start(self):
         pass
         
