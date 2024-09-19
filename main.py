@@ -31,7 +31,14 @@ class Stopwatch(QWidget):
             hbox.addWidget(self.start_label)            
             hbox.addWidget(self.stop_label)            
             hbox.addWidget(self.reset_label) 
-            vbox.addLayout(hbox )
+            
+            vbox.addLayout(hbox)
+            
+            self.setStyleSheet("""
+                QPushButton{
+                    font-size: 50px;
+                }                   
+            """)
             
     def start(self):
         pass
