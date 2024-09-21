@@ -75,13 +75,13 @@ class Stopwatch(QWidget):
     
     def reset(self):
         self.timer.stop()
-        self.timer = QTime(0,0,0,0)
+        self.time = QTime(0,0,0,0)
         self.time_label.setText(self.format_time(self.time))
     
     def format_time(self,time):
         hours = time.hour()
-        minutes = time.minutes()
-        seconds = time.seconds()
+        minutes = time.minute()
+        seconds = time.second()
         miliseconds = time.msec()//10
         return f"{hours:02}:{minutes:02}:{seconds:02}.{miliseconds:02}"
     
